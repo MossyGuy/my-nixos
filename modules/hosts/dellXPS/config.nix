@@ -20,7 +20,9 @@
       efi.canTouchEfiVariables = true;      
     };
 
-    boot.kernelPackages = pkgs.linuxPackages_latest;
+    #boot.kernelPackages = pkgs.linuxPackages_latest;
+    boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_19;
+
     networking.hostName = "dellXPS";
     
     networking.networkmanager.enable = true;
@@ -60,6 +62,7 @@
     };
 
     services.openssh.enable = true;
+
     services.tailscale.enable = true;
 
     environment.systemPackages = with pkgs; [
