@@ -7,7 +7,7 @@
     };
 
     home-manager.users.anon = {
-      home.stateVersion = "25.11";
+      #home.stateVersion = "25.11";
       programs.helix.enable = true;
     };
   };
