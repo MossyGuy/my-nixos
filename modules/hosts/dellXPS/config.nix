@@ -60,7 +60,6 @@
     };
 
     services.openssh.enable = true;
-
     services.tailscale.enable = true;
 
     environment.systemPackages = with pkgs; [
