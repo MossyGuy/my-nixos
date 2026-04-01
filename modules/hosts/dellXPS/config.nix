@@ -46,7 +46,17 @@
       enable = true;
       wayland = true;
     };
+    #services.displayManager.ly = {
+    #  enable = true;
+    #};
     services.desktopManager.gnome.enable = true;
+    #xdg.portal = {
+    #  enable = true;
+    #  extraPortals = with pkgs; [
+    #    xdg-desktop-portal-gtk
+    #  ];
+    #};
+
 
     console.keyMap = "slovene";
     services.printing.enable = true;
@@ -68,6 +78,7 @@
     environment.systemPackages = with pkgs; [
       firefox
       helix    
+      niri
       codex
       tree
     ];
